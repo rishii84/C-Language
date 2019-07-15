@@ -1,28 +1,39 @@
 #include<stdio.h>
 
-void checkEvenOdd(int);
+char checkEvenOdd();
 
 void main() {
-	int num, isEven, again=0;
+	int num, isEven;
+	char again;
 	
 	printf("\n\n");
+	again = checkEvenOdd();
+	printf(" %c",again);
+//	while(1){		
+//		again = checkEvenOdd();
+//		if(again=='y'){
+//			checkEvenOdd();
+//		}else{
+//			break;
+//		}
+//	}
 	
-	while(again!=1){
-		printf("\tEnter a no. : ");
-		scanf("%d", &num);
-		checkEvenOdd(num);
-		
-		printf("\tDo you want to retry(1 for yes) : ");
-		scanf("%d", &again);
-	}
-	
-	printf("\n\n");
+//	printf("\n\n");
 }
 
-void checkEvenOdd(int num) {
+char checkEvenOdd() {
+	int num, yep;
+	printf("\tEnter a no. : ");
+	scanf("%d", &num);
+	
 	if(num%2==0){
 		printf("\n\tNo. is even");
 	}else{
 		printf("\n\tNo. is odd");
 	}
+	
+	printf("\n\tDo you want to retry(y/n) : ");
+	scanf(" %c", &yep);
+	
+	return yep;
 }

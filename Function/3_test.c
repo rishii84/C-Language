@@ -1,12 +1,11 @@
-// find greater and then check even using other funtion
-// if even <100
-// if odd wrong
 #include<stdio.h>
 
+// Defining function
 void checkGreater(int, int);
 void checkEven(int);
 void checkGreaterFrom(int);
 
+// Main function
 void main() {
 	int num1, num2;
 	
@@ -19,6 +18,7 @@ void main() {
 	checkGreater(num1, num2);
 }
 
+// Checking greater of two no.
 void checkGreater(int num1, int num2) {
 	if(num1<num2){
 		checkEven(num2);
@@ -29,6 +29,7 @@ void checkGreater(int num1, int num2) {
 	}
 }
 
+// Check if the no. is even
 void checkEven(int num) {
 	if(num%2==0){
 		checkGreaterFrom(num);
@@ -37,6 +38,7 @@ void checkEven(int num) {
 	}
 }
 
+// Check if the no. is greater than 100
 void checkGreaterFrom(int num){
 	if(num>100){
 		printf("\n\tyou are alright");
