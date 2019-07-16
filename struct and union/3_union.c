@@ -14,6 +14,7 @@
 					float sal;
 				  };
 	
+	Union is used when we have to print the value of a variable just after taking the value as it store only one memory.	
 */
 
 #include<stdio.h>
@@ -21,9 +22,17 @@
 union emp{
 	char name[20];
 	int eid;
-	double sal;
+	float sal;
 }u1;
 
 void main() {
-	printf("Memory size : %d", sizeof(u1));
+	printf("\nEnter your name : ");
+	scanf("%s", u1.name);
+	printf("\n%s", u1.name);
+	printf("\nEnter EID : ");
+	scanf("%d", &u1.eid);
+	printf("\n%d", u1.eid);
+	printf("\nEnter your salary : ");
+	scanf("%f", &u1.sal);
+	printf("\n%f", u1.sal);
 }
